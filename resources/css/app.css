@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+@source '../**/*.jsx';
+
+@theme {
+    --font-sans: 'Poppins', 'Montserrat', 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+@layer utilities {
+    @keyframes bimb-slide-in {
+        from {
+            opacity: 0;
+            transform: translateY(28px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes bimb-soft-float {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-8px);
+        }
+    }
+
+    @keyframes bimb-modal-fade {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes bimb-modal-pop {
+        from {
+            opacity: 0;
+            transform: translateY(22px) scale(0.96);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+    }
+
+    .bimb-reveal {
+        animation: bimb-slide-in 0.8s ease both;
+    }
+
+    .bimb-float {
+        animation: bimb-soft-float 5s ease-in-out infinite;
+    }
+
+    .bimb-modal-backdrop {
+        animation: bimb-modal-fade 0.35s ease both;
+    }
+
+    .bimb-modal-card {
+        animation: bimb-modal-pop 0.55s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+    }
+
+    .bimb-pink-pattern {
+        background-color: #dc2a54;
+        background-image:
+            radial-gradient(circle at 2px 2px, rgba(255, 255, 255, 0.12) 2px, transparent 2.6px),
+            radial-gradient(circle at 0 100%, rgba(255, 255, 255, 0.1) 0 1px, transparent 1px),
+            repeating-radial-gradient(circle at 82% 118%, transparent 0 44px, rgba(255, 255, 255, 0.18) 45px 47px, transparent 48px 86px);
+        background-position: 0 0, 0 0, 0 0;
+        background-size: 28px 28px, 100% 100%, 100% 100%;
+    }
+
+    .bimb-pink-arc {
+        background-color: #dc2a54;
+        background-image:
+            repeating-radial-gradient(circle at 82% 118%, transparent 0 52px, rgba(255, 255, 255, 0.2) 53px 56px, transparent 57px 104px),
+            linear-gradient(135deg, rgba(255, 255, 255, 0.08), transparent 42%);
+    }
+
+    .bimb-soft-panel {
+        background-image:
+            radial-gradient(circle at 18% 12%, rgba(220, 42, 84, 0.1), transparent 24%),
+            radial-gradient(circle at 88% 18%, rgba(20, 58, 129, 0.08), transparent 20%),
+            linear-gradient(180deg, #fff, #fff7fa);
+    }
+}
