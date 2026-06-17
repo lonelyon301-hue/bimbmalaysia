@@ -11,6 +11,7 @@ import TaskAltIcon from "@mui/icons-material/TaskAlt";
 import VerifiedUserIcon from "@mui/icons-material/VerifiedUser";
 import WorkspacePremiumIcon from "@mui/icons-material/WorkspacePremium";
 import { useEffect, useState } from "react";
+import ScamWarning from "../Components/ScamWarning";
 import { PublicLayout, useLanguage } from "../Components/PublicLayout";
 
 const sliders = [
@@ -269,6 +270,9 @@ export default function Home() {
                         </div>
                     </div>
                 </section>
+                <div className="mx-auto max-w-7xl px-5 sm:px-8">
+                    <ScamWarning language={language} />
+                </div>
                 <div className="px-4 md:px-8 lg:px-16 mt-9">
                     <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
                         {page.cards.map(([title, description], index) => (
