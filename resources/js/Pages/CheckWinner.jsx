@@ -141,10 +141,6 @@ export default function CheckWinner() {
                     </div>
                 </section>
 
-                <div className="mx-auto max-w-7xl px-5 pb-6 sm:px-8">
-                    <ScamWarning language={language} />
-                </div>
-
                 <section className="mx-auto grid max-w-7xl gap-6 px-5 pb-12 sm:px-8 lg:grid-cols-[1.1fr_0.9fr]">
                     {/* <form className="rounded-lg border border-[#e0e0e0] bg-white p-6 shadow-xl shadow-[#8f1437]/15 sm:p-8">
                         <h2 className="text-2xl font-semibold text-[#dc2a54]">{page.formTitle}</h2>
@@ -481,6 +477,10 @@ export default function CheckWinner() {
                         </div>
                     </aside>
                 </section>
+
+                <div className="mx-auto max-w-7xl px-5 pb-12 sm:px-8">
+                    <ScamWarning language={language} />
+                </div>
             </main>
 
             {showSearchingModal && (
